@@ -1,6 +1,5 @@
 import re
 import numpy as np
-from time import perf_counter_ns as pcns
 
 def get_first_and_last_digit(line):
     #unpack string and get all numbers
@@ -17,7 +16,7 @@ with open('input.txt') as f:
   lines=[line.strip() for line in f.readlines()]
 
 x=map(get_first_and_last_digit, lines)
-print('Solution for part 1: ', np.sum(list(x)), t2-t1)
+print('Solution for part 1: ', np.sum(list(x)))
 
 #------------------------------------------------
 numbers=['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
@@ -35,4 +34,4 @@ for i,line in enumerate(lines):
   #print(y)
   calibration_values_sum+=first_digit*10+last_digit
 
-print('Solution for part 2: ', calibration_values_sum, t2-t1)
+print('Solution for part 2: ', calibration_values_sum)
